@@ -1,0 +1,9 @@
+<resources>
+    <color name="cyan">#00F6FF</color>
+    <color name="magenta">#FF2BD6</color>
+    <color name="amber">#FFB000</color>
+    <color name="bg">#04060A</color>
+    <color name="muted">#5F7D8C</color>
+    <color name="dim">#33505E</color>
+    <color name="line">#3300F6FF</color>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RemoteViews-safe: LinearLayout / TextView only, shape-drawable background,
+     1dp TextView divider (no bare <View>, no vector drawables). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GOES X-RAY FLUX"
+        android:textColor="@color/cyan"
+        android:textSize="10sp"
+        android:letterSpacing="0.12" />
+
+    <TextView
+        android:id="@+id/widget_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:id="@+id/widget_flux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GOES X-ray"
+        android:textColor="@color/muted"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAST M+ FLARE"
+        android:textColor="@color/amber"
+        android:textSize="10sp"
+        android:letterSpacing="0.12" />
+
+    <TextView
+        android:id="@+id/widget_last_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="—"
+        android:textColor="@color/amber"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/widget_last_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tap to open"
+        android:textColor="@color/muted"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/widget_updated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="upd --:--:--"
+        android:textColor="@color/dim"
+        android:textSize="9sp"
+        android:gravity="end" />
+
+</LinearLayout>

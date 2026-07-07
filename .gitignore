@@ -1,0 +1,12 @@
+.gradle/
+build/
+app/build/
+out/
+local.properties
+*.iml
+.idea/
+.DS_Store
+# Generated at build time by ci/prepare_assets.py:
+app/src/main/res/mipmap-*/
+app/src/main/res/drawable-nodpi/splash.png
+app/src/main/res/raw/not.wav

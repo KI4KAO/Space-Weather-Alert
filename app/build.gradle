@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'net.ki4kao.spaceweatheralert'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "net.ki4kao.spaceweatheralert"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+// Guarantee a single Kotlin stdlib version across all transitive AndroidX deps.
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24'
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24'
+    }
+}
+
+dependencies {
+    // Align every transitive kotlin-stdlib / -jdk7 / -jdk8 artifact to one version.
+    // Without this, AndroidX pulls stdlib 1.8.22 while an older -jdk7/-jdk8 1.6.21
+    // also lands on the classpath, and the jdk7/jdk8 classes (merged into the main
+    // stdlib since Kotlin 1.8) collide -> "Duplicate class kotlin.*" build failure.
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.24')
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.13.1'
+}

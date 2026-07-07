@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_toggle_notif"
+        android:checkable="true"
+        android:title="Notifications: On"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_test"
+        android:title="Test notification"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_refresh"
+        android:title="Refresh"
+        android:showAsAction="never" />
+</menu>

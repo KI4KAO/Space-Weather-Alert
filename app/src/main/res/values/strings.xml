@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Space Weather Alerts</string>
+    <string name="widget_desc">Current X-ray flux and last M+ flare</string>
+</resources>
